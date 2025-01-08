@@ -25,6 +25,25 @@ mybutton.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
 
+
+// navigation scroll effect
+let prevscroll = window.scrollY;
+
+window.onscroll = function () {
+    let currentscroll = window.scrollY;
+
+    // navigation 
+    if (prevscroll < 80) {
+        document.querySelector('header').classList.remove("with-bg");
+    }
+    else {
+        document.querySelector('header').classList.add("with-bg");
+    }
+    
+    prevscroll = currentscroll;
+}
+
+
 // Calender
 
 // Get the current date, month, and year

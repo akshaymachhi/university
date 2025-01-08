@@ -144,9 +144,10 @@ h4 {
 
 /* Navigation */
 
-.main-navigation {
+.header {
   padding: 20px 0;
   background-color: var(--blue-Color);
+  width: 100%;
 }
 
 .main-navigation .navigation {
@@ -195,6 +196,13 @@ h4 {
 }
 .toggle-btn .close-btn {
   display: none;
+}
+
+.header.with-bg {
+  background: #1e2f3e;
+  position: fixed;
+  z-index: 999;
+  transition:  0.5s ease-in-out;
 }
 
 /* Banner  */
@@ -456,8 +464,13 @@ h4 {
   }
 
   .main-navigation {
-    padding: 30px 25px;
+    padding: 20px 25px;
   }
+
+  .header{
+    padding: 0;
+  }
+  
   .main-navigation .navigation {
     justify-content: space-between;
   }
